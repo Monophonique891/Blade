@@ -1,0 +1,48 @@
+{
+  "type": "library",
+  "name": "walnut-ideas/blade",
+  "description": "Use the power of Blade template engine without the full Laravel framework",
+  "minimum-stability": "stable",
+  "keywords": ["laravel", "templating", "blade", "engine", "template", "views"],
+  "homepage": "https://walnut-ideas.de",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Bachmann Kevin",
+      "email": "bachmann@walnut-ideas.de",
+      "homepage": "https://walnut-ideas.de",
+      "role": "Developer"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/Monophonique891/Blade"
+    }
+  ],
+  "require": {
+    "illuminate/contracts": "^v11.34",
+    "illuminate/events": "^v11.34",
+    "illuminate/filesystem": "^v11.34",
+    "illuminate/view": "^v11.34",
+    "vlucas/phpdotenv": "^v5.6.1",
+    "php": "^8.3",
+    "walnut-ideas/blade": "master"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.11.1",
+    "phpunit/phpunit": "^11.4.4"
+  },
+  "autoload": {
+    "psr-4": { "WalnutIdeas\\Laravel\\": "src/" }
+  },
+  "autoload-dev": {
+    "psr-4": { "WalnutIdeas\\Tests\\Laravel\\": "tests/" }
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpunit",
+      "vendor/bin/phpcs --standard=phpcs.xml"
+    ]
+  }
+}
